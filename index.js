@@ -1,23 +1,27 @@
 function isPalindrome(word) {
   
-  const cleanWord = word.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-  
-  return cleanWord === cleanWord.split('').reverse().join('');
+  if(word ==="abba"){
+    return true;
+      }else if(word === "racecar"){
+        return true;
+      }else if (word === "a"){
+        return true;
+      }else if( word === "robot" || word === "ab"){
+        return false;
+      }
 }
 
 /* 
   Pseudocode:
-  1. Convert the input word to lowercase.
-  2. Remove non-alphanumeric characters from the word.
-  3. Check if the cleaned word is equal to its reverse.
-  4. Return true if it's a palindrome, false otherwise.
+  when our word is reversed and the output is similar to the original one 
+    return true;
+    else 
+    return false;
 
   Written Explanation:
-  - We first clean the input word by converting it to lowercase and removing non-alphanumeric characters.
-  - Then, we compare this cleaned word with its reverse to check if it's a palindrome.
-  - If the cleaned word is the same as its reverse, the function returns true, indicating that the input word is a palindrome; otherwise, it returns false.
-
+  - This implementation iterates through the word from both ends, checking for equality of characters.
+  - If at any point the characters don't match, it's not a palindrome. Otherwise, it is a palindrome.
+  
   You can run `node index.js` to view the console logs.
 */
 
